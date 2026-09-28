@@ -6,17 +6,22 @@
   <meta name="description" content="Site pour les concerts sur lille">
   <title>WAVE - Les concerts près de chez vous</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="header-menu">
     <h1 style="display: none">Concerts à Lille : découvrez les prochains concerts et événements musicaux</h1>
     <img src="assets/wave-logo.svg" alt="Logo du site web"/>
-    <nav>
-      <li><a href="#Concerts"> Concerts </a></li>
-      <li><a href="#Artistes"> Artistes </a></li>
-      <li><a href="Villes"> Villes </a></li>
+    <nav arial-label="Navigation principale">
+      <ul class="nav-link" class="roboto-uniquifier">
+      <li><a href="#Concerts" title="Lien vers les concerts"> Concerts </a></li>
+      <li><a href="#Artistes" title="Lien vers les artistes"> Artistes </a></li>
+      <li><a href="#Villes" title="Lien vers les villes"> Villes </a></li>
+      </ul>
     </nav>
-    <button> Créer un compte </button>
+    <button class="header_button"> Créer un compte </button>
   </header>
   <section>
     <p> LILLE . CETTE SEMAINE </p>
@@ -26,6 +31,21 @@
     <img src="assets/concert-hero.png" alt="Image d'un concert"/>
     <p> À NE PAS MANQUER </p>
     <p> Pulse Night . 21 Septembre </p>
+  </section>
+  <section id="Concerts">
+    <p> À L'AFFICHE </p>
+    <h3> Cette semaine à Lille </h3>
+    <article>
+    <img src="assets/lina-k.png" alt="Image de l'artiste Lina-k"/>
+    <p> Électro </p>
+    </article>
+    <article>
+    <img src="assets/noa-v.png" alt="Image de l'artiste Noa-v"/>
+    <p> Rap alternatif </p>
+    </article>
+    <article>
+      <p> OPEN AIR </p>
+    </article>
   </section>
 </body>
 </html>
