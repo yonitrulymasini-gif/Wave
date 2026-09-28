@@ -2,50 +2,103 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="WAVE, les concerts à découvrir près de chez vous.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site pour les concerts sur lille">
   <title>WAVE - Les concerts près de chez vous</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,900;1,14..32,900&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header-menu">
-    <h1 style="display: none">Concerts à Lille : découvrez les prochains concerts et événements musicaux</h1>
-    <img src="assets/wave-logo.svg" alt="Logo du site web"/>
-    <nav arial-label="Navigation principale">
-      <ul class="nav-link" class="roboto-uniquifier">
-      <li><a href="#Concerts" title="Lien vers les concerts"> Concerts </a></li>
-      <li><a href="#Artistes" title="Lien vers les artistes"> Artistes </a></li>
-      <li><a href="#Villes" title="Lien vers les villes"> Villes </a></li>
-      </ul>
-    </nav>
-    <button class="header_button"> Créer un compte </button>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#top" aria-label="WAVE - Accueil">
+        <h1 class="visuallyhidden">WAVE - les concerts près de chez vous</h1>
+        <img src="assets/wave-logo.svg" alt="WAVE" width="126" height="34">
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#concerts">Concerts</a><a href="#artistes">Artistes</a><a href="#villes">Villes</a>
+      </nav>
+      <a class="account-link" href="#newsletter">Créer un compte</a>
+    </div>
   </header>
-  <section>
-    <p> LILLE . CETTE SEMAINE </p>
-    <h2> Le prochain son qui va te faire vibrer. </h2>
-    <p> Des petites salles aux grandes scènes, découvre les artistes qui jouent près de chez toi.</p>
-    <button> Voir les concerts ↘ </button>
-    <img src="assets/concert-hero.png" alt="Image d'un concert"/>
-    <p> À NE PAS MANQUER </p>
-    <p> Pulse Night . 21 Septembre </p>
-  </section>
-  <section id="Concerts">
-    <p> À L'AFFICHE </p>
-    <h3> Cette semaine à Lille </h3>
-    <article>
-    <img src="assets/lina-k.png" alt="Image de l'artiste Lina-k"/>
-    <p> Électro </p>
-    </article>
-    <article>
-    <img src="assets/noa-v.png" alt="Image de l'artiste Noa-v"/>
-    <p> Rap alternatif </p>
-    </article>
-    <article>
-      <p> OPEN AIR </p>
-    </article>
-  </section>
+  <!-- Main -->
+  <main id="top">
+    <!-- Hero section -->
+    <section class="hero container" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="kicker"><span></span>Lille · Cette semaine</p>
+        <h2 id="page-title">Le prochain son qui va te faire vibrer.</h2>
+        <p class="hero-text">Des petites salles aux grandes scènes, découvre les artistes qui jouent près de chez toi.</p>
+        <a class="primary-button" href="#concerts">Voir les concerts <span aria-hidden="true">↘</span></a>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/concert-hero.png" alt="Un concert dans une petite salle éclairée en bleu et violet">
+        <figcaption><span>À ne pas manquer</span><strong>Pulse Night · 21 septembre</strong></figcaption>
+      </figure>
+    </section>
+
+    <!-- Section Concerts -->
+    <section class="events-section" id="concerts" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">À l'affiche</p>
+            <h2 id="events-title">Cette semaine à Lille</h2>
+          </div>
+          <a class="text-link" href="#all-events">
+            Tous les concerts <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <!-- Section artistes -->
+        <div class="event-grid" id="artistes">
+          <article class="event-card">
+            <a class="event-image" href="#lina-k" aria-label="Voir le concert de Lina K">
+              <img src="assets/lina-k.png" alt="Lina K derrière sa console de musique électronique"><span class="genre">Électro</span>
+            </a>
+            <div class="event-info">
+              <time class="event-date" datetime="2026-09-19T20:30"><strong>19</strong><span>SEP</span></time>
+              <div><h3>Lina K</h3><p>Le Flow · 20:30</p></div>
+              <a class="round-link" href="#lina-k" aria-label="Détails du concert de Lina K">→</a>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <a class="event-image" href="#noa-v" aria-label="Voir le concert de Noa V">
+              <img src="assets/noa-v.png" alt="Noa V sur scène avec un microphone"><span class="genre">Rap alternatif</span>
+            </a>
+            <div class="event-info">
+              <time class="event-date" datetime="2026-09-22T21:00"><strong>22</strong><span>SEP</span></time>
+              <div><h3>Noa V</h3><p>L'Aéronef · 21:00</p></div>
+              <a class="round-link" href="#noa-v" aria-label="Détails du concert de Noa V">→</a>
+            </div>
+          </article>
+
+          <article class="event-card event-poster">
+            <div class="poster-content"><p class="poster-label">Open air</p><p class="poster-name">NORTH<br>WAVES</p><p class="poster-place">Gare Saint-Sauveur</p></div>
+            <div class="event-info">
+              <time class="event-date" datetime="2026-09-27T18:00"><strong>27</strong><span>SEP</span></time>
+              <div><h3>North Waves</h3><p>6 artistes · Dès 18:00</p></div>
+              <a class="round-link" href="#north-waves" aria-label="Détails du festival North Waves">→</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Section Newsletter -->
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter-content">
+        <div><p class="eyebrow">Chaque jeudi</p><h2 id="newsletter-title">Les bons concerts.<br>Pas le spam.</h2></div>
+        <a class="secondary-button" href="mailto:hello@wave-music.fr">Recevoir la sélection <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+  <!-- Footer Villes -->
+  <footer class="site-footer" id="villes">
+    <div class="container footer-content">
+      <img src="assets/wave-logo.svg" alt="WAVE" width="126" height="34">
+      <p>La musique live,<br>près de chez toi.</p>
+      <div class="footer-links"><a href="#instagram">Instagram</a><a href="#tiktok">TikTok</a><span>© 2026 WAVE</span></div>
+    </div>
+  </footer>
 </body>
 </html>
